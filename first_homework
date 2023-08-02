@@ -4,3 +4,4 @@ smile = '\U000026F0'
 summa ='Моя улюблена країна - це ' + country + ' вона у меня асоціюється з '+ association + smile
 
 print(summa)
+
