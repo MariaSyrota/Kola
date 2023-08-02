@@ -5,3 +5,4 @@ favorite_food = pw_input('Ведіть улюблену страву >>>').lower
 smile = '\U0001F576'
 summa = f"О я теж люблю {favorite_food} {smile}"
 put_success(summa)
+
