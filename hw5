@@ -1,0 +1,33 @@
+from pywebio.input import input as pw_input, slider, FLOAT
+from pywebio.output import put_success
+
+ONE_KILO_CALORIE = 0.32541
+
+ENERGY_OSTRIGH_EGG = 118
+ENERGY_RABBIT = 197
+ENERGY_BANANA = 87
+total_energy = 0
+
+portion_ostrigh_egg = pw_input(f'Введіть бажану порцію страусиних яєць 🥚, грам'
+                               f'Калорійність {ENERGY_OSTRIGH_EGG} кКал/100гр', type=FLOAT)
+portion_ostrich_egg_energy = (float(portion_ostrigh_egg) * ENERGY_OSTRIGH_EGG) / 100
+total_energy = total_energy + portion_ostrich_egg_energy
+put_success(f'Ви заказали {portion_ostrigh_egg} грамів страусиних яєць 🥚,\n'
+            f'Калорійність порціі {portion_ostrigh_egg}\n'
+            f'Загальна накопичена калорійність замовлення: {total_energy}')
+
+portion_rabbit = slider(f'Введіть бажану порцію кролика 🐇, грам'
+                               f'Калорійність {ENERGY_RABBIT} кКал/100гр', min_value=0, max_value=2500)
+portion_rabbit_energy = (float(portion_rabbit) * ENERGY_RABBIT) / 100
+total_energy = total_energy + portion_rabbit_energy
+put_success(f'Ви заказали {portion_rabbit} грамів кролика 🐇,\n'
+            f'Калорійність порціі {portion_rabbit}\n'
+            f'Загальна накопичена калорійність замовлення: {total_energy}')
+
+portion_banana = pw_input(f'Введіть бажану порцію бананів 🍌, грам'
+                               f'Калорійність {ENERGY_BANANA} кКал/100гр', type=FLOAT)
+portion_banana_energy = (float(portion_banana) * ENERGY_BANANA) / 100
+total_energy = total_energy + portion_banana_energy
+put_success(f'Ви заказали {portion_banana} грамів бананів 🍌,\n'
+            f'Калорійність порціі {portion_banana}\n'
+            f'Загальна накопичена калорійність замовлення: {total_energy}')
