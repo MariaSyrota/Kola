@@ -31,3 +31,4 @@ total_energy = total_energy + portion_banana_energy
 put_success(f'Ви заказали {portion_banana} грамів бананів 🍌,\n'
             f'Калорійність порціі {portion_banana}\n'
             f'Загальна накопичена калорійність замовлення: {total_energy}')
+
