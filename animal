@@ -1,7 +1,7 @@
 from pywebio.input import input as pw_input
 from pywebio.output import put_success
 
-animal_like = pw_input('Ведіть улюблену тварину >>>').lower().title().strip()
+animal_like = pw_input('Ведіть улюблену тварину >>>').lower().strip()
 animal_name = pw_input('Ведіть кличку тварини >>>').lower().title().strip()
 
 is_cat = 'кіт' == animal_like
@@ -20,10 +20,10 @@ is_turtle = 'черепаха' == animal_like
 turtle_emodji = '\U0001F422'
 
 can_pet_swim = False
-if animal_like == is_fish or animal_like == is_turtle:
+is_fish or animal_like == is_turtle:
     can_pet_swim = True
 
-if animal_like == is_fish or animal_like == is_turtle:
+can_pet_swim:
     put_success(f'Купіть аквариум для {animal_name}')
 
 if is_cat:
@@ -41,5 +41,5 @@ if is_fish:
 if is_turtle:
     put_success(f'{animal_name}- у черепах міцні панцирі {turtle_emodji}')
 
-else:
+if else:
     put_success(f'Не знаю такого але прикольне імя {animal_name} \U0001F440')
