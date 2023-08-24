@@ -41,5 +41,5 @@ if is_fish:
 if is_turtle:
     put_success(f'{animal_name}- у черепах міцні панцирі {turtle_emodji}')
 
-if else:
+else:
     put_success(f'Не знаю такого але прикольне імя {animal_name} \U0001F440')
