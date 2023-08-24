@@ -2,4 +2,4 @@ country = 'Україна'
 association = 'горами без снігу'
 smile = '\U000026F0'
 sum = country + ' вона у меня асоціюється з '+ association
-print(f'Моя улюблена країна - це ', sum, smile)
+print(f'Моя улюблена країна - це  {sum} {smile}')
