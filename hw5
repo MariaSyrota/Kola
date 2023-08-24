@@ -1,5 +1,6 @@
 from pywebio.input import input as pw_input, slider, FLOAT
 from pywebio.output import put_success
+from decimal import Decimal
 
 ONE_KILO_CALORIE = 0.32541
 
@@ -119,3 +120,12 @@ put_success(f'Ви заказали {portion_kefir} мілілитрів  кеф
             f'Всього до сплати {sum10} грн')
 
 put_success(f'Всього до сплати {sum10} грн')
+
+sum = sum1 + sum2 + sum3 + sum4 + sum5 + sum6 + sum7 + sum8 + sum9 + sum10
+
+if sum < 1000:
+    put_success(f'я все ще голодний 😭')
+    if sum < 1500:
+        put_success(f'я наївся 😋')
+    if sum > 1500:
+        put_success(f'Я наївся але ще залишилось, гроші на вітер 🙄')
