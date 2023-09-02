@@ -1,45 +1,26 @@
-from pywebio.input import input as pw_input
-from pywebio.output import put_success
+import hw11
 
-animal_like = pw_input('Ведіть улюблену тварину >>>').lower().strip()
-animal_name = pw_input('Ведіть кличку тварини >>>').lower().title().strip()
 
-is_cat = 'кіт' == animal_like
-cat_emodji = '\U0001F431'
+def test_live_below_zero():
+    expected = 'такого не може бути'
+    age = -5
+    actual = hw11.live(age)
+    assert actual == expected
 
-is_dog = 'собака' == animal_like
-dog_emodji = '\U0001F436'
+def test_live_18():
+    expected = 'Ви дитина'
+    age = 18
+    actual = hw11.live(age)
+    assert actual == expected
 
-is_humster = 'хомяк' == animal_like
-humster_emodji = '\U0001F439'
+def test_live_65():
+    expected = 'Пpацюйте більше'
+    age = 65
+    actual = hw11.live(age)
+    assert actual == expected
 
-is_fish = 'риба' == animal_like
-fish_emodji = '\U0001F41F'
-
-is_turtle = 'черепаха' == animal_like
-turtle_emodji = '\U0001F422'
-
-can_pet_swim = False
-is_fish or animal_like == is_turtle:
-    can_pet_swim = True
-
-can_pet_swim:
-    put_success(f'Купіть аквариум для {animal_name}')
-
-if is_cat:
-    put_success(f'{animal_name}- він ловить маленьків гризунів {cat_emodji}')
-
-if is_dog:
-    put_success(f'{animal_name}- дуже боюсь коли вони гавкають {dog_emodji}')
-
-if is_humster:
-    put_success(f'{animal_name}- хомяки такі маленькі {humster_emodji}')
-
-if is_fish:
-    put_success(f'{animal_name}- рибку не смажити {fish_emodji}')
-
-if is_turtle:
-    put_success(f'{animal_name}- у черепах міцні панцирі {turtle_emodji}')
-
-else:
-    put_success(f'Не знаю такого але прикольне імя {animal_name} \U0001F440')
+def test_live_after_65():
+    expected = 'Счастливой пенсии'
+    age = 65
+    actual = hw11.live(age)
+    assert actual == expected
