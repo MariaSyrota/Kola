@@ -1,13 +1,9 @@
-def live(agel):
-    age = int(input('Сколько Вам лет? '))
-    if age > agel:
-        print('Счастливой пенсии')
-    elif age > 18:
-        print('Пpацюйте більше')
-    elif age < 18:
-        print('Ви дитина')
-    elif age < 0:
-        print('такого не може бути')
-
-
-live(65)
+def live(age: int) -> str:
+    if age < 0:
+        return 'такого не може бути'
+    elif age <= 18:
+        return 'Ви дитина'
+    elif age <= 65:
+        return 'Пpацюйте більше'
+    else:
+        return 'Счастливой пенсии'
