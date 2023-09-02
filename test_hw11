@@ -1,0 +1,26 @@
+import hw11
+
+
+def test_live_below_zero():
+    expected = 'такого не може бути'
+    age = -5
+    actual = hw11.live(age)
+    assert actual == expected
+
+def test_live_18():
+    expected = 'Ви дитина'
+    age = 18
+    actual = hw11.live(age)
+    assert actual == expected
+
+def test_live_65():
+    expected = 'Пpацюйте більше'
+    age = 65
+    actual = hw11.live(age)
+    assert actual == expected
+
+def test_live_after_65():
+    expected = 'Счастливой пенсии'
+    age = 65
+    actual = hw11.live(age)
+    assert actual == expected
