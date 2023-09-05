@@ -1,0 +1,14 @@
+cities_be = input('Ведіть через пробіл міста у яких ви були останні 10 років>>>').title().split()
+cities_want_be = input('Ведіть через пробіл міста у яких ви хочите побувати наступні 10 років>>>').title().split()
+
+cities_be_2 = set(cities_be)
+cities_want_be_2 = set(cities_want_be)
+# print(cities_be_2)
+# print(cities_want_be_2)
+cities = (cities_be_2.intersection(cities_want_be_2))
+print(cities)
+
+if not cities:
+    print('У вас многое впереди')
+else:
+    print(f"прикольні міста {', '.join(cities)},")
