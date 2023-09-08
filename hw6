@@ -1,0 +1,5 @@
+cities = " київ,\nоДеса \nЛьвів.\nжитоМИР,\nуЖгОрОд.....\nХарКІВ \n,слАвУтИч".replace(',', ' ').replace('.', ' ').title().split()
+print(cities)
+for city in cities:
+    print(f'Я \U00002764 {cities}')
+pass
